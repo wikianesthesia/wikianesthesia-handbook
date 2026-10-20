@@ -35,6 +35,8 @@ contract versioned by the platform's SemVer, not a build-time link.
 - `docs/` *(migrating in — see the session handoff)* — mission and strategy,
   organization and outlook, strategy and evolution; today these still live in the
   web repository under `docs/`.
+- `CONTRIBUTING.md` — the rules that apply in every repository; `SECURITY.md` — how
+  to report a vulnerability.
 - `.context/SESSION_HANDOFF.md` — the cross-session relay: what state the handbook
   is in and the exact next action.
 

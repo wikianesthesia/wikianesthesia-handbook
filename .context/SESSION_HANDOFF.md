@@ -51,6 +51,43 @@ Then, in one session with both sibling checkouts present
    migration" if it grows past one issue). Close it with the commit hashes from
    all three repos.
 
+## The sweep — what belongs here, from both code repos (do with the migration)
+
+The test: *is it true for the organization regardless of codebase?* If yes it
+lives here and the code repos link to it; if it is about one codebase it stays
+there. Each fact in exactly one place.
+
+**Moves here (after a sensitivity review — this repo is PUBLIC; the web repo was
+private):** `docs/mission-and-strategy.md`, `docs/organization-and-outlook.md`
+(names people and institutions — confirm with each person what may be public, or
+generalize), `docs/strategy-and-evolution.md`.
+
+**Becomes a living page here, summarized from a web ADR that stays as the
+record:** `docs/work-tracking.md` (the Linear operating guide: teams WEB/APP/
+CONTENT, label axes, flags, triage, views, how agents use it — from web ADR 017
+and the 2026-10-20 setup); the production promises (from web ADR 014, the
+PRIVACY.md contracts, `docs/integrations/mobile-app.md`, the app's physician
+sign-off rule) — already summarized in `AGENTS.md` here.
+
+**Shrinks in the code repos to a link + the repo-specific remainder:** web
+`AGENTS.md` §"What this project is" (org paragraph) and the org-wide half of
+§"Hard constraints" (no production SSH ever; secrets never committed); app
+`AGENTS.md` §"What this project is" (org context, mission, the
+"seed of technical redundancy" note) and the org-wide half of its constraints.
+The web `AGENTS.md` byte budget (16 KiB) makes this shrink welcome.
+
+**Stays where it is:** web `docs/aws.md`, `docs/integrations/mobile-app.md` (the
+web repo owns the contract), ADRs 011/013/016/017 (records), all runbooks,
+`docs/issues/`; app `issues/`, `docs/reviews/`, clinical gotchas; both `CLAUDE.md`
+shims.
+
+**Gaps found while surveying (open as Linear issues):** the wiki content has no
+declared license (`$wgRightsText` is empty in the tracked config) — an
+organization decision (CC BY-SA 4.0 is the wiki-world norm; mission says "freely
+accessible") that then lands in the web config; neither code repository has a
+LICENSE file; the code repositories should enable GitHub private vulnerability
+reporting to match `SECURITY.md` here.
+
 ## Not in scope of the migration
 
 - Moving ADRs out of the web repo's numbered series (they stay; this repo's
