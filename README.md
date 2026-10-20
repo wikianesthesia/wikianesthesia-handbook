@@ -36,7 +36,8 @@ contract versioned by the platform's SemVer, not a build-time link.
   organization and outlook, strategy and evolution; today these still live in the
   web repository under `docs/`.
 - `CONTRIBUTING.md` — the rules that apply in every repository; `SECURITY.md` — how
-  to report a vulnerability.
+  to report a vulnerability; `LICENSE` — this handbook's text is CC BY-SA 4.0
+  ([ADR 002](docs/decisions/002-content-license-cc-by-sa.md)).
 - `.context/SESSION_HANDOFF.md` — the cross-session relay: what state the handbook
   is in and the exact next action.
 
