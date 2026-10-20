@@ -9,13 +9,18 @@ repository alone.
 - Date: 2026-10-20
 - State: **skeleton only.** Created in a `wikianesthesia-web` session that had the
   full context of why this repo exists (see ADR 001). No organization documents
-  have moved yet; no GitHub remote yet.
+  have moved yet. Remote: `github.com/wikianesthesia/wikianesthesia-handbook`
+  (private for now — see the visibility note below).
 
 ## Exact next action — the migration (a fresh session rooted here)
 
-Prerequisite (maintainer): create the empty GitHub repo
-`wikianesthesia/wikianesthesia-handbook` and add it as `origin`; push this
-skeleton. Then, in one session with both sibling checkouts present
+Decide visibility first (maintainer): the handbook is designed to hold no
+secrets (the web repo's gitignored `docs/private/` never moves here), so it can
+be **public** — which lets agents in any repo read it by raw URL with no local
+clone and no freshness problem. If it stays private, every code repo's `AGENTS.md`
+instead instructs agents to keep a sibling clone current
+(`git -C ../wikianesthesia-handbook pull --ff-only`, cloning if absent).
+Then, in one session with both sibling checkouts present
 (`../wikianesthesia-web`, `../wikianesthesia-app`):
 
 1. **Move the organization documents** from the web repo into `docs/` here with
