@@ -19,6 +19,7 @@ team.
 | [`wikianesthesia-web`](https://github.com/wikianesthesia/wikianesthesia-web) | The web platform: custom MediaWiki extensions and skins, the Docker deployment, infrastructure docs, runbooks | its `AGENTS.md` |
 | [`wikianesthesia-app`](https://github.com/wikianesthesia/wikianesthesia-app) *(renamed from `-mobile`)* | The Flutter mobile app: native clinical tooling plus a thin integration with the wiki | its `AGENTS.md` |
 | **`wikianesthesia-handbook`** (this repo) | Organization docs: mission, strategy, promises, working agreements, decisions that span repos | `AGENTS.md` here |
+| `wikianesthesia-ops` *(private)* | Sensitive-but-shareable operational knowledge: institution-specific integration notes, the operational-accounts register. No secrets. | its `AGENTS.md` |
 
 The repositories are deliberately separate (no monorepo, no meta-repo): see
 [ADR 001](docs/decisions/001-repository-topology.md). The one dependency between

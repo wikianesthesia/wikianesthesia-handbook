@@ -61,6 +61,18 @@ instructions should live so they are maintained once.
 - Nothing about release mechanics changes: each repo releases on its own cadence
   (web: tag + image digest per web ADR 016; app: app-store builds via Codemagic).
 
+## Amendment 2026-10-21 — a fourth, private repository for operational knowledge
+
+The handbook is public, so it cannot hold what is sensitive without being secret:
+institution-specific integration detail (the external clinical embed) and the
+register of who holds which external account — a social-engineering target list
+if published. Those live in **`wikianesthesia-ops`**, a private documentation
+repository shared between the maintainers, replacing a gitignored folder that
+existed on one laptop. It holds no secrets (the password manager does); the
+public handbook carries the rules ("two holders per account") and points at it.
+When an infrastructure-as-code repository exists (Phase 6), the ops repo can sit
+beside it or fold into its docs.
+
 ## Follow-ups
 
 - Rename `wikianesthesia-mobile` → `wikianesthesia-app` on GitHub before binding
