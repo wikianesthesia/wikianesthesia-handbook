@@ -69,6 +69,24 @@ repo keeps its deep engineering write-ups (security/privacy analyses, ADRs,
 specs) next to the code; Linear carries status and discussion. Ruling: the web
 repo's ADR 017.
 
+**Connecting an agent.** Agents reach Linear through Linear's hosted MCP server,
+`https://mcp.linear.app/mcp` (OAuth 2.1, read-write; `https://mcp.linear.app/mcp/readonly`
+exposes only read tools). Register it once per machine, then sign in with your own
+Linear account:
+
+```bash
+# Claude Code (user scope: available in every repository); then run /mcp in a session to sign in
+claude mcp add --transport http --scope user linear-server https://mcp.linear.app/mcp
+
+# Codex
+codex mcp add linear --url https://mcp.linear.app/mcp
+codex mcp login linear
+```
+
+A working connection reports the workspace as **WikiAnesthesia**. The connector
+reads and writes issues, projects and comments; creating teams and binding GitHub
+repositories to teams are workspace-admin actions in the Linear UI.
+
 ## Working in this repository
 
 The handbook is documentation only. Write every page as if it had always been
