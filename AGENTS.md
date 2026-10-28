@@ -37,7 +37,9 @@ newcomer must not make unknowingly; they are recorded as ADRs.
 3. **The mobile app's integration contract.** The app hardcodes the website's URL
    structure and consumes read-only APIs and two DOM couplings. The contract is
    `docs/integrations/mobile-app.md` in the web repo; breaking it is a **major**
-   platform version (ADR 016 there), never a silent change.
+   platform version (ADR 016 there), never a silent change. Installed app versions
+   keep working: a change ships alongside the old behavior until a support window
+   (a six-month guideline) has passed ([ADR 003](docs/decisions/003-installed-app-versions.md)).
 4. **Clinical values need a clinician.** No dose, hold time, timer interval or
    equipment size enters or changes in either codebase without physician sign-off
    against a cited source.
