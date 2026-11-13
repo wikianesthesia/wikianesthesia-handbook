@@ -8,8 +8,11 @@ rules that apply across every repository; each repository's `AGENTS.md` and
 - **Work is tracked in Linear**, not in GitHub issues (see `AGENTS.md` §How work
   is tracked). A pull request or commit that says `Fixes WEB-54` moves the issue.
   If you are not a workspace member, open a GitHub issue and we will mirror it.
-- **Trunk-based.** Short-lived branches, pull requests into `main`, CI green before
-  merge. No long-lived or per-environment branches.
+- **Trunk-based, and every change is reviewed.** Short-lived branches; every change
+  reaches `main` through a pull request, and CI passes before merge. The other
+  maintainer reviews; either may merge their own after writing "Merging without
+  review: <reason>" in it. Merge commits only. No long-lived or per-environment
+  branches. The rules: `docs/decisions/004-reviewed-pull-requests.md`.
 - **Clinical values need a clinician.** No dose, hold time, timer interval or
   equipment size enters or changes without physician sign-off against a cited
   source — in either codebase.
