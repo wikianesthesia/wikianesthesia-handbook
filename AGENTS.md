@@ -71,6 +71,19 @@ repo keeps its deep engineering write-ups (security/privacy analyses, ADRs,
 specs) next to the code; Linear carries status and discussion. Ruling: the web
 repo's ADR 017.
 
+## Branches and reviews
+
+Every change in every repository reaches `main` through a pull request the other
+maintainer can review (ADR 004). As an agent:
+
+- branch, commit, push your branch, open the pull request, and request the other
+  maintainer's review;
+- write the description for a reviewer outside the codebase's specialty: what
+  changes for users or operators, the risk, and how you verified it;
+- never merge or approve a pull request without a maintainer's go-ahead for that
+  pull request, and never push to `main` except the bookkeeping files the
+  repository's `AGENTS.md` declares.
+
 ## Working in this repository
 
 The handbook is documentation only. Write every page as if it had always been
@@ -78,4 +91,5 @@ true (no "previously", no change-date annotations in descriptive text; chronolog
 belongs in ADRs and git history). Each fact lives in exactly one place: if it is
 about one codebase, it belongs in that codebase, not here. Record decisions that
 span repositories as ADRs in `docs/decisions/` and index them in its `README.md`.
-Rewrite `.context/SESSION_HANDOFF.md` at the end of any material session.
+Rewrite `.context/SESSION_HANDOFF.md` at the end of any material session. It is
+this repository's one bookkeeping file: it goes straight to `main` (ADR 004).
